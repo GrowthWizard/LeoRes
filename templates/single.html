@@ -1,0 +1,31 @@
+<!-- wp:template-part {"slug":"desktopbanner","theme":"leores","tagName":"aside","className":"lr-top-navbar-desktop "} /-->
+
+<!-- wp:template-part {"slug":"header","theme":"leores","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"3%","right":"5%","bottom":"5%","left":"5%"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"lightbg","layout":{"inherit":true}} -->
+<main class="wp-block-group has-lightbg-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:3%;padding-right:5%;padding-bottom:5%;padding-left:5%"><!-- wp:group {"tagName":"aside","style":{"spacing":{"padding":{"top":"2%"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<aside class="wp-block-group" style="padding-top:2%"><!-- wp:paragraph -->
+	<p>Kategorien:</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:post-terms {"term":"category"} /--></aside>
+	<!-- /wp:group -->
+	
+	<!-- wp:group {"tagName":"article","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"spacing":{"padding":{"top":"2.5vw","right":"2.5vw","bottom":"2.5vw","left":"2.5vw"}}},"backgroundColor":"white","textColor":"darkgrey"} -->
+	<article class="wp-block-group has-darkgrey-color has-white-background-color has-text-color has-background has-link-color" style="padding-top:2.5vw;padding-right:2.5vw;padding-bottom:2.5vw;padding-left:2.5vw"><!-- wp:post-title {"level":1,"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}},"textColor":"darkgrey","fontSize":"x-large","fontFamily":"jost"} /-->
+	
+	<!-- wp:shortcode -->
+	[rank_math_breadcrumb]
+	<!-- /wp:shortcode -->
+	
+	<!-- wp:post-featured-image /-->
+	
+	<!-- wp:separator {"backgroundColor":"lightprimary"} -->
+	<hr class="wp-block-separator has-text-color has-lightprimary-color has-alpha-channel-opacity has-lightprimary-background-color has-background"/>
+	<!-- /wp:separator -->
+	
+	<!-- wp:post-content /--></article>
+	<!-- /wp:group --></main>
+	<!-- /wp:group -->
+	
+	<!-- wp:template-part {"slug":"footer","theme":"leores","tagName":"footer"} /-->

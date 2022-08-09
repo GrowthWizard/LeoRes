@@ -1,0 +1,325 @@
+/*
+Theme Name: Leores
+Author: Dominik Stein
+Description: A financial wordpress theme, build with SEO in mind.
+Author URI: https://steindominik.de
+Theme URI: https://leores.de
+Tags: full-site-editing
+Text Domain: leores
+Requires at least: 5.8
+Requires PHP: 7.4
+Tested up to: 6.0
+Version: 1.1.0
+*/
+
+
+/* Reset Browser Settings */
+ * {
+    box-sizing: border-box;
+}
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Global Variables for Reference */
+
+/* :root {
+    --primary-font: 'Jost', sans-serif;
+    --btn-font: brandon-grotesque, sans-serif;
+    --white: #fff;
+    --black: #000;
+    --light-grey: #ECECEC;
+    --grey: #D9D9D9;
+    --dark-grey: #3E3E3E;
+    --gold: #D4B86A;
+    --transparent: rgba(255, 255, 255, 0);
+}
+*/
+
+
+/* Global CSS */
+
+a:hover {
+	color: var(--wp--preset--color--primary);
+	opacity: 0.8;
+}
+
+.wp-block-button:hover {
+	background-color: var(--wp--preset--color--lightbg);
+}
+
+.zero-margin {
+    margin: 0;
+}
+
+.lr-border-outline{
+    border: 1px solid var(--wp--preset--color--primary);
+}
+
+/* Buttons */
+.lr-readmore-black:after {
+    font-family: "Font Awesome 5 Free";
+    margin-left: 12px;
+    content: "\f105";
+}
+
+
+.is-style-outline>.wp-block-button__link:not(.has-background){
+    border: 2px solid var(--wp--preset--color--primary);
+ 
+}
+
+
+
+
+/* Top NavBar Styling */
+
+.lr-logo {
+    padding: 0.5em 0em;
+}
+
+.lr-top-navbar {
+    display: block;
+}
+
+.lr-cta-btn {
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.lr-top-navbar-desktop {
+    display: none;
+}
+
+.lr-callUs:before {
+    font: var(--fa-font-solid);
+    content: "\f879";
+    color: var(--wp--preset--color--primary);
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.lr-WriteMe:before {
+    font: var(--fa-font-solid);
+    content: "\f0e0";
+    color: var(--wp--preset--color--primary);
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.lr-bookMe:before {
+    font: var(--fa-font-solid);
+    content: "\f783";
+    color: var(--wp--preset--color--primary);
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+/*** Devices like iPhone SE ***/
+@media (max-width: 330px) {
+    .lr-top-navbar {
+        display: none;
+    }
+
+    .home .lr-top-navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 749px) {
+
+    .lr-top-navbar-desktop {
+        display: none;
+    }
+}
+
+/*** Devices above iPhone 8 ***/
+@media (min-width: 750px) {
+    
+    .lr-top-navbar {
+        display: none;
+    }
+
+    .lr-top-navbar-desktop {
+        display: block;
+    }
+}
+
+
+/* Navbar Styling */
+
+/* Removes Block Margin which is automatically added by the Gutenberg Editor */
+.single header, .single footer, .page header, .page footer, .archive header, 
+.archive footer, .category header, .category footer, 
+.blog header, .blog footer, .error404 header, .error404 footer {
+    margin: 0!important;
+    margin-block-start: none;
+    margin-block-end: none;
+}
+
+.lr-transparent-nav {
+    position: absolute;
+    top: 3.5vw;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 9999;
+}
+
+.lr-transparent-nav .wp-block-navigation__responsive-container-open {
+    color: #fff;
+}
+
+
+.lr-transparent-nav:where(.wp-block-group.has-background), .lr-transparent-nav:where(.wp-block-group.has-background) {
+    padding: none!important;
+}
+
+/*** Devices like iPhone SE ***/
+@media (max-width: 330px) {
+    .lr-header .wp-block-cover {
+        padding-top: 14vw!important;
+    }
+}
+
+@media (max-width: 749px) {
+
+    .lr-transparent-nav {
+        top: 0vw;
+    }
+
+    .lr-header .wp-block-cover {
+        padding-top: 18vw!important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+
+    .lr-header-negative-margin {
+        margin-top: -24px;
+    }
+}
+
+/* Header Styling */
+
+.lr-header {
+    margin: 0;
+}
+
+.lr-header .wp-block-cover__inner-container {
+    min-width: 100%;
+}
+
+/*** Devices like iPhone SE ***/
+@media (max-width: 330px) {
+    .lr-title {
+        padding-top: 15vw;
+        font-size: 30px!important;
+    }
+}
+
+@media (max-width: 749px) {
+
+    .lr-transparent-nav {
+        padding: 0px 5%!important;
+    }
+}
+
+/* Footer */ 
+
+.lr-footer-menu a{
+    text-decoration: none;
+}
+
+@media (min-width: 750px) {
+
+    #copyright {
+        padding-right: 1.5rem;
+        border-right: 1px solid var(--wp--preset--color--primary);
+    }
+}
+
+
+/* WPForm Contact Form */ 
+
+.lr-kontakt {
+    font-size: var(--wp--preset--font-family--jost)!important;
+}
+
+.lr-kontakt .wpforms-container-full .wpforms-field.wpforms-field-select-style-classic select {
+    height: 64px;
+    background-color: var(--wp-preset--color--primary)!important;
+}
+
+#wpforms-496-field_3, #wpforms-496-field_1, #wpforms-496-field_0, #wpforms-496-field_0-last {
+    height: 64px;
+    font-size: var(--wp--custom--typography--font-size--normal);
+    margin-bottom: 1vw;
+}
+
+#wpforms-496-field_2, .wpforms-form textarea.wpforms-field-medium {
+    font-size: var(--wp--custom--typography--font-size--normal)!important;
+    font-family: var(--wp--preset--font-family--jost)!important;
+}
+
+.wpforms-container-full .wpforms-form button[type=submit]{
+    background-color: #fff!important;
+    border: 1px solid #D4B86A!important;
+    color: #3E3E3E!important;
+    font-size: var(--wp--custom--typography--font-size--normal)!important;
+    padding: 25px 38px!important;
+    margin-top: 1vw;
+}
+
+/*Plugin Styling */ 
+
+.simpletoc-list {
+    line-height: 1.6;
+    list-style-type: circle;
+}
+
+/* RankMath toggable FAQ's 
+* Reference: https://silvanhagen.com/rankmath-faq-block-accordion/
+*/
+
+
+#rank-math-faq .rank-math-list-item {
+    margin-bottom: 1em;
+    margin-top: 2em;
+    border-bottom: 1px solid #b3a068;
+}
+
+.rank-math-question {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding-right: 1em;
+    margin-right: 1em;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.rank-math-question:after {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    content: "\2715";
+    transform: rotate(-45deg);
+    transition: all 150ms ease-in-out;
+    color: #b3a068!important;
+}
+
+.rank-math-question.collapse:after {
+    transform: rotate(0deg);
+}
+
+.rank-math-question:hover {
+    opacity: 0.6;
+}
